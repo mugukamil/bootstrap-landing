@@ -1,0 +1,466 @@
+$grey: #ececec
+$orange: #ffc66d
+$green: #e5ffe1
+$blue: #65a6ff
+$red: #ff795b
+$yellow: #fff2a1
+
+body
+  font-family: "Roboto Mono", monospace, sans-serif
+
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.btn
+  border: 1px solid #6a8759
+  border-radius: 4px
+  background: transparent
+  color: #6a8759
+  font-size: 14px
+  font-weight: 400
+
+.row-no-padding
+  [class*="col-"]
+    padding-left: 0 !important
+    padding-right: 0 !important
+
+.site-header
+  padding: 7px 0
+  background-color: $grey
+  .btn
+    padding: 2px 38px
+
+.hero
+  padding-top: 50px
+  background-image: url("../img/hero-bg.png")
+  height: 100%
+  +cover
+  h1
+    color: white
+    font-size: 38px
+    font-weight: 300
+    margin-bottom: 9px
+    +r(490)
+      font-size: 30px
+  p
+    color: #d0d8df
+    font-size: 16px
+    font-style: italic
+    +r(490)
+      font-size: 14px
+  pre
+    padding: 0 0 70px 0
+    margin-top: 50px
+    background-color: transparent
+    border: none
+    font-size: 18px
+    +r(670)
+      font-size: 16px
+    +r(600)
+      font-size: 14px
+    +r(530)
+      font-size: 12px
+    +r(460)
+      font-size: 11px
+    +r(425)
+      font-size: 10px
+    .code-yellow
+      color: #bbb529
+      font-weight: 500
+    .code-white
+      color: #D0D8DF
+      font-weight: 300
+    .code-string
+      color: #6a8759
+      font-weight: 500
+    .code-orange
+      color: #cc7832
+      font-weight: 500
+    .code-main-yellow
+      color: #BBB529
+      font-weight: 500
+    .code-violet
+      color: #9876AA
+      font-weight: 400
+
+.section
+  h1
+    font-size: 22px
+    font-weight: 500
+  &--grey
+    background-color: $grey
+  &--blue
+    background-color: $blue
+  &--green
+    background-color: $green
+  &--yellow
+    background-color: $yellow
+
+
+.cta
+  padding: 35px 0
+  p
+    color: black
+    font-size: 16px
+    font-weight: 300
+    margin-bottom: 28px
+  .btn
+    padding: 10px 50px
+  span
+    padding-right: 3px
+    padding-left: 3px
+
+.text-bg
+  background-color: $orange
+
+.text-white
+  color: white
+
+.text-orange
+  color: $orange
+
+.about
+  padding-top: 50px
+  padding-bottom: 70px
+  p
+    color: #3f3f3f
+    font-size: 16px
+    font-weight: 300
+    margin-top: 25px
+
+.benefits
+  padding-top: 50px
+  padding-bottom: 80px
+  color: white
+  h1
+    color: white
+    margin-bottom: 45px
+  h2
+    margin-top: 8px
+    font-size: 16px
+    font-weight: 500
+  p
+    font-size: 12px
+    font-weight: 400
+  .col-sm-offset-1
+    +rmin(770)
+      margin-left: 6.333333%
+    & + .col-sm-3
+      +r(768)
+        margin-top: 40px
+  .row
+    & + .row
+      margin-top: 80px
+      +r(768)
+        margin-top: 40px
+
+.program
+  padding-top: 30px
+  padding-bottom: 50px
+  h1
+    margin-bottom: 30px
+  .panel-default
+    border: none
+    box-shadow: none
+    a
+      color: black
+      font-size: 16px
+      font-weight: 400
+    img
+      vertical-align: top
+      margin-top: 5px
+      margin-right: 12px
+      float: left
+  .panel-heading
+    background: transparent
+    padding-left: 11px
+  .panel-title
+    a
+      display: block
+#accordion
+  .panel-body
+    background-color: #efefef
+    border-top: none
+    padding-left: 40px
+    padding-top: 20px
+    padding-bottom: 20px
+    li
+      color: black
+      font-size: 12px
+      font-weight: 400
+
+.teacher
+  padding-top: 40px
+  padding-bottom: 50px
+  figure
+    +r(768)
+      margin-top: 20px
+    img
+      border-radius: 50%
+      margin-bottom: 20px
+    span
+      color: #444
+      font-size: 18px
+      font-style: italic
+      padding-right: 7px
+      padding-left: 7px
+      padding-top: 2px
+      padding-bottom: 4px
+  &__info
+    padding-top: 40px
+    +r(768)
+      text-align: center
+    p
+      font-size: 18px
+      font-style: italic
+      color: #444
+      & + p
+        margin-top: 20px
+    em
+      margin-top: 20px
+      display: inline-block
+      color: #989898
+
+.how
+  padding-top: 28px
+  padding-bottom: 48px
+  h1
+    margin-bottom: 30px
+  p
+    color: black
+    font-size: 14px
+    font-weight: 400
+    & + p
+      margin-top: 20px
+
+.price
+  padding-top: 25px
+  padding-bottom: 50px
+  &__badge
+    width: 89px
+    height: 90px
+    background-color: $orange
+    position: relative
+    border-radius: 50%
+    margin-top: 80px
+    margin-left: 20%
+    +r(575)
+      margin-left: auto
+      margin-right: auto
+      margin-top: 40px
+      margin-bottom: 40px
+    img
+      position: absolute
+      top: -20px
+      right: -20px
+  &__new
+    color: #3e3e3e
+    font-size: 44px
+    font-weight: 700
+    position: absolute
+    top: 0
+    left: -14px
+    transform: rotate(20deg)
+  &__old
+    color: #787878
+    font-size: 26px
+    font-weight: 700
+    position: absolute
+    bottom: -5px
+    left: 29px
+    transform: rotate(20deg)
+    &:before
+      border-bottom: 2px solid #ff3d00
+      position: absolute
+      content: ""
+      width: 100%
+      height: 50%
+  &__left
+    +r(575)
+      width: 100%
+      margin-left: auto
+  &__right
+    +r(575)
+      width: 100%
+      text-align: center
+      ul
+        margin-top: 20px
+  h2
+    display: inline-block
+    padding: 2px 8px
+    font-size: 16px
+    font-weight: 500
+  li
+    color: black
+    font-size: 16px
+    font-weight: 300
+    font-style: italic
+    & + li
+      margin-top: 10px
+
+.quantity
+  padding-top: 30px
+  padding-bottom: 50px
+  h1
+    color: #787878
+    font-weight: 400
+    margin-bottom: 10px
+  &__bigtext
+    background-color: $red
+    color: white
+    display: inline-block
+    padding: 11px 12px
+    margin-top: 10px
+
+.btn--red
+  font-size: 22px
+  line-height: 42px
+  padding-top: 0
+  color: white
+  font-weight: 700
+  background-color: $red
+  border: none
+  border-radius: 0
+  text-shadow: none
+  box-shadow: none
+  outline: none
+  &:hover,
+  &:active,
+  &:focus
+    background-color: $red
+    border: none
+    border-radius: 0
+    text-shadow: none
+    box-shadow: none
+    outline: none
+
+.join
+  padding-top: 20px
+  padding-bottom: 70px
+  +r(768)
+    padding-bottom: 0
+  h1
+    margin-bottom: 40px
+  .card
+    min-height: 383px
+    border-radius: 10px 0 0 10px
+    padding-top: 3px
+    padding-bottom: 15px
+    +r(768)
+        margin-top: 0
+        border-radius: 0
+    +r(1200)
+      min-height: 400px
+    &__header
+      margin-bottom: 30px
+      h1
+        color: #b7b7b7
+      span.text-orange
+        font-size: 30px
+    &--group
+      background-color: #4b4d51
+    &--individual
+      background-color: #125cfe
+      border-radius: 0 10px 10px 0
+      p.card__price-now
+        margin-top: 35px
+    &__price-now
+      margin-top: 32px
+      color: white
+    &__text
+      font-size: 12px
+      font-style: italic
+      padding: 0 20px
+      color: #e6e6e6
+    &__price
+      color: white
+      font-size: 64px
+      font-weight: 400
+    &__footer
+      em
+        color: white
+        font-size: 10px
+      p
+        color: #c6c6c6
+        font-size: 12px
+        margin-bottom: 0
+        font-style: italic
+
+.form-section
+  padding-top: 18px
+  padding-bottom: 35px
+  &__after
+    color: #6b6b6b
+    font-size: 16px
+    font-style: italic
+    margin-top: 10px
+
+.site-form
+  width: 265px
+  margin-top: 20px
+  margin-left: auto
+  margin-right: auto
+  label
+    color: black
+    font-size: 12px
+    font-weight: 400
+  input
+    border: 1px solid #4a90e2
+    border-radius: 0
+    color: #8fb7e7
+    font-size: 12px
+    font-style: italic
+    +placeholder-color(#8fb7e7)
+  .btn-submit
+    width: 100%
+    border-radius: 8px
+    color: #4a90e2
+    border: 2px solid #4a90e2
+
+.form-radio
+  margin-bottom: 30px
+  label:last-child
+    margin-left: 23px
+  input
+    vertical-align: top
+    display: none
+    & + label i
+      width: 11px
+      height: 11px
+      border: 1px solid #979797
+      display: inline-block
+      vertical-align: middle
+      cursor: pointer
+      border-radius: 50%
+      background-color: white
+      margin-right: 7px
+    & + label span
+      color: #404040
+      font-style: italic
+    &:checked + label i
+      border: none
+      background-color: #4990e2
+
+
+.guarantee
+  padding-bottom: 20px
+  h1
+    margin-bottom: 30px
+  p
+    color: #3e3e3e
+    font-size: 14px
+    font-style: italic
+    strong
+      font-weight: 700
+    & + p
+      margin-top: 18px
+
+.site-footer
+  padding-top: 40px
+  padding-bottom: 30px
+  .copy
+    color: #3e3e3e
+    font-size: 14px
+    font-style: italic

@@ -1,0 +1,26 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class=name + modClass)
+    use(xlink:href= svgSprite + '#' + name)
+
+mixin btn(text)
+  a.btn&attributes(attributes) Записаться #{text}
+
+mixin panel(num, count)
+  .panel.panel-default
+    div.panel-heading(role='tab' id='heading' + num)
+      h4.panel-title
+        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapse#{num}', aria-expanded='false', aria-controls='collapse#{num}')
+          img(src="img/arrow-down.png", alt="")
+          strong Неделя
+          | #{space} #{count}. Введение Java
+    div.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading#{num}' id='collapse' + num)
+      .panel-body
+        ul
+          -for (var i = 1; i <= 6; i++)
+            li #{i}. Переменные, ключевые слова и правила именования

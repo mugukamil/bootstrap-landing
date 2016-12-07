@@ -1,0 +1,238 @@
+---
+title: Index Page
+space: ' '
+---
+extends layouts/_layout
+block content
+  header.site-header
+    .container
+      .row
+        .col-md-3.pull-left
+          a(href="/")
+            img(src="img/logo.svg", alt="jetiup")
+        .col-md-3.text-right.pull-right
+          //- button.btn.btn-primary Записаться
+          +btn(href="#form")
+  .hero
+    .container
+      .row
+        .col-md-10.col-md-offset-2
+          h1 Курс: Java Developer
+          p Первый живой курс от проекта Devcolibri
+          .code
+            pre
+              code
+                span.code-yellow @Start
+                span.code-white (
+                span.code-string “20 Apr 2016”
+                span.code-white )
+                br
+                span.code-orange import
+                span.code-white  me.jediup.java
+                span.code-orange ;
+                br
+                br
+                span.code-orange public class
+                span.code-white  JavaDeveloper {
+                br
+                span.code-orange    public static void
+                span.code-main-yellow  main
+                span.code-white (String[] args) {
+                br
+                span.code-white       System.
+                span.code-violet out
+                span.code-white .println(
+                span.code-string “Join to Java Developer Course!”
+                span.code-white )
+                span.code-orange ;
+                br
+                span.code-white    }
+                br
+                span.code-white }
+  section.section.cta.section--grey.text-center
+    .container
+      p
+        | Начало #{space}
+        strong 20 Апреля #{space}
+        | 2016
+        br
+        | Количество #{space}
+        span.text-bg мест ограниченно
+      .row
+        +btn('в группу')(href="#form")
+  section.section.about
+    .container
+      h1.text-center О курсе
+      p В этом курсе вы научитесь писать на языке Java испозуя все синтаксические конструкции и начучитесь правильно применять эти конструкции на практике. Курс охватывает все возможности языка Java и принципы Java SE, а также базовые возможности Java EE, которые буду рассмотренны на практике и разобраны на конкретных примерах из жизни разработки продукта в больших компаниях.
+  section.section.section--blue.benefits.text-center
+    .container
+      h1 Что вы получите?
+      .row
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-1.svg", alt="practice")
+          h2 Практика
+          p Каждая теоретическая составляющая курса будет в двойне подкрепленна практикой дабы понимать как и где применять полученные знания.
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-2.svg", alt="practice")
+          h2 Гибкость
+          p Время занятий согласовываются со всеми учениками группы, и каждый может выбрать найболее подходящее время для себя.
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-3.svg", alt="practice")
+          h2 Запись
+          p Даже если вы пропустите занятие, то не беда так как уже на следующий день каждый получет запись занятия.
+      .row
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-4.svg", alt="practice")
+          h2 Проверка Д/З
+          p Каждое выполненое вами задание будет проверенно преподователем после чего будет составлен отзыв об ошибках.
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-5.svg", alt="practice")
+          h2 Приватый чат
+          p После формирования группы вы будите добавлены в приватный Slack чат в котором активно будет участвовать преподаватель.
+        .col-sm-3.col-sm-offset-1
+          img(src="img/benefit-6.svg", alt="practice")
+          h2 Финальный Проект
+          p К окончанию курса вы напишите свой небольшой проект на основании полученных знаний.
+  section.section.program
+    .container
+      h1.text-center Программа Курса
+      .row
+        #accordion.col-md-8.col-md-offset-2.panel-group(role='tablist', aria-multiselectable='true')
+          +panel('One', 1)
+          +panel('Two', 2)
+          +panel('Three', 3)
+          +panel('Four', 4)
+          +panel('Five', 5)
+          +panel('Six', 6)
+          +panel('Seven', 7)
+          +panel('Eight', 8)
+          +panel('Nine', 9)
+          +panel('Ten', 10)
+  section.section.section--grey.teacher
+    .container
+      h1.text-center Преподаватель
+      .row
+        .col-sm-4
+          figure.text-center
+            img(src="img/teacher.png", alt="Alexandr Bondarchyk")
+            figcaption
+              span.text-bg Александр Барчук
+        .col-sm-8.teacher__info
+          p
+            | Software Engineer с опытом разработки 5 лет;
+            br
+            | Основное направление Java Enterprice, Spring;
+            br
+            | Работал на 5 крупных проектах решая разного рода задачи;
+            br
+            | Также имеет опыт разработки Full Stack приложения с нуля.
+          p.
+            Основатель проекта Devcolibri и автор более 100 обучающих видео на тематики: Java, Android, Kotlin, Git…
+          em p.s. First do it, then do it right, then do it better.
+  section.section.how
+    .container
+      h1.text-center Как проходит обучение?
+      .row
+        .col-md-10.col-md-offset-1
+          p Все занятия проходят онлайн. Два раза в неделю проходят лекции, где преподователь дает теоретическую и практическую информацию. Вы также сможете задавать вопросы по материалу.
+          p После лекции каждый получит домашнее задание с пояснением того что нужно сделать. Все домашние задания будут основаны на полученой информации на лекции. Также через 12 часов после занятия вы получите запись лекции, которую сможите повторно просмотреть.
+          p Вы также сможите задавать вопросы по домашнему заданию либо по пройденой теме на лекции в любое удобное вам время в Slack чате где преподователь будет стараться активно отвечать на ваши вопросы и помогать в решении проблем.
+          p Раз в две недели мы будем проводить дополнительное занятие, где в формате свободного общения обсудим все что уже было пройденно и там же каждый сможет задать свои вопросы и получить на них ответы.
+          p Каждый из группы будет иметь два персональных занятия с преподавателем которые помогут лучше усвоить материал.
+  section.section.section--green.price
+    .container
+      h1.text-center Сколько стоит курс?
+      .row
+        .col-xs-3.col-xs-offset-1.col-md-2.col-md-offset-3.price__left
+          .price__badge
+            img(src="img/cap.svg", alt="cap")
+            span.price__new 180$
+            span.price__old 260$
+        .col-xs-8.col-md-6.price__right
+          h2.text-bg Что вы получите?
+          ul
+            li - 2 индивидуальных занятия
+            li - Лицензия на Intellij IDEA
+            li - Проверка каждого домашнего задания
+            li - Запись всех лекций
+            li - 25 занятий
+  section.section.quantity.text-center
+    .container
+      h1 Количество мест
+        br
+        span.quantity__bigtext ограничено!
+  section.section.section--grey.join.text-center
+    .container
+      h1 Записаться в группу
+      .row.row-no-padding
+        .col-md-8.col-md-offset-2
+          .col-xs-12.col-sm-6.col-md-6
+            .card.card--group
+              header.card__header
+                h1 Курс #{space}
+                  span.text-white Java Developer
+                  br
+                  span.text-orange Group
+              p.card__text.
+                Занятия проходят в группе 5-10 чел.
+                Также каждый получит 2 индивидуальных занятия с преподавателем для решение не понятных для вас моментов или тем.
+              p.card__price-now Текущая стоимость курса
+              strong.card__price 180$
+              footer.card__footer
+                em Длительность курса: 2,5 месеца
+                p Возможно оплата частями!
+          .col-xs-12.col-sm-6.col-md-6
+            .card.card--individual
+              header.card__header
+                h1 Курс #{space}
+                  span.text-white Java Developer
+                  br
+                  span.text-orange Individual
+              p.card__text.
+                Занятия проходят индивидуально с преподователем.
+                Есть возможность построить индивидуальный график занятий удобный вам и преподователю.
+              p.card__price-now Текущая стоимость курса
+              strong.card__price 500$
+              footer.card__footer
+                em Длительность курса: 2 месеца
+                p Возможно оплата частями!
+  section.section.form-section#form
+    .container
+      h1.text-center Записаться на курсы
+      form.site-form
+        .form-group
+          label(for="name") Ваше имя:
+          input.form-control(type="text" placeholder="Введите ваше имя" name="name")
+        .form-group
+          label(for="email") Ваш e-mail:
+          input.form-control(type="text" placeholder="Введите e-mail" name="email")
+        .form-group.text-center.form-radio
+          input(type="radio" name="course" id="radio-group" value="group")
+          label(for="radio-group")
+              i
+              span Group
+          input(type="radio" name="course" id="radio-individual" value="individual")
+          label(for="radio-individual")
+              i
+              span Individual
+        .form-group
+          +btn('в группу').btn-submit
+      .row
+        .col-md-8.col-md-offset-2
+          p.form-section__after.text-center.
+            После того как мы получим вашу заявку мы отправим вам все детали по расписанию и вы сможете задать свои вопросы если они будут, после согласование всех деталей вы сможите произвести оплату.
+            Спасибо!
+  section.section.section--yellow.guarantee.text-center
+    .container
+      h1 Гаранития возврата!
+      .row
+        .col-md-8.col-md-offset-2
+          p.
+            Нам важно чтобы наши ученики были довльны от полученых знаний и результатов.
+            Нам также важно чтобы каждый получил максимум от курса, а для этого вам должно все устраивать и нравится процесс обучения.
+          p.
+            Именно поэтому после первых двух занятий если вас что либо не устроит в данном курсе или вы вдруг передумаете обучаться с нами вам достаточно написать вашему преподавателю что вы бы не хотели продолжать свое обучение и мы в течении 2-3 рабочих дней вернем вам полную стоимость курса без каких либо вопросов!
+          p
+            strong Нам важна наша репутация и результаты наших учеников!
+  footer.site-footer.text-center
+    p.copy Copyright © 2016-2017 - Devcolibri Lab.
